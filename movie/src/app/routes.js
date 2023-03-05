@@ -4,9 +4,11 @@ import Detail from "../features/booking/Detail";
 import Home from "../features/booking/Home";
 import Seats from "../features/booking/Seats";
 
-const routers = [ 
+export const routers = [ 
     {path: "/", componet:Home},
-    {path: "/detail", componet:Detail},
+    {path: "/detail", componet:Detail, children: [
+        {path:'/a', componet: ''},{path:'/b', componet: ''}
+    ]},
     {path: "/seats", componet:Seats},
     {path: "/signin", componet:Signin},
     {path: "/signup", componet:Signup},
